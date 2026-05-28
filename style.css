@@ -442,18 +442,7 @@ body::after {
 }
 
 .nebula-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 150vw;
-  height: 150vh;
-  background: 
-    radial-gradient(circle at 30% 40%, rgba(14,42,100,0.35) 0%, transparent 50%),
-    radial-gradient(circle at 70% 60%, rgba(212,160,23,0.18) 0%, transparent 50%);
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  filter: blur(20px);
-  opacity: 0.75;
+  display: none;
 }
 
 /* Saturn Planet */
@@ -1358,21 +1347,7 @@ body { overflow: hidden; }
 }
 
 .earth-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 120%;
-  background: radial-gradient(circle at center, rgba(212,160,23,0.25) 0%, rgba(14,42,100,0.35) 40%, transparent 70%);
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  pointer-events: none;
-  animation: pulseGlobe 6s infinite alternate;
-}
-
-@keyframes pulseGlobe {
-  from { opacity: 0.6; transform: translate(-50%, -50%) scale(0.9); }
-  to { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+  display: none;
 }
 
 /* Orbital Rings */
