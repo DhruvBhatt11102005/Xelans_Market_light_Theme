@@ -1307,6 +1307,7 @@ body { overflow: hidden; }
 .galactic-earth-container {
   position: relative;
   z-index: 2;
+  transform: translateY(-60px);
   transform-style: preserve-3d;
 }
 
