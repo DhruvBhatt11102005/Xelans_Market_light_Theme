@@ -3269,7 +3269,7 @@ body { overflow: hidden; }
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.12;
+  opacity: 0.55;
   overflow: hidden;
 }
 .features-bg-image img {
