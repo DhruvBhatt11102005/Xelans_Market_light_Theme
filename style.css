@@ -1314,9 +1314,6 @@ body { overflow: hidden; }
   width: 100%;
   max-width: 420px;
   height: auto;
-  filter: drop-shadow(0 0 80px rgba(212,160,23,0.5)) drop-shadow(0 0 30px rgba(26,58,122,0.4));
-  mask-image: radial-gradient(circle at center, black 40%, transparent 75%);
-  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 75%);
   animation: slowSpin 120s linear infinite;
 }
 
