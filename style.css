@@ -1314,6 +1314,8 @@ body { overflow: hidden; }
   width: 100%;
   max-width: 420px;
   height: auto;
+  mask-image: radial-gradient(circle at center, black 55%, transparent 72%);
+  -webkit-mask-image: radial-gradient(circle at center, black 55%, transparent 72%);
   animation: slowSpin 120s linear infinite;
 }
 
