@@ -2295,6 +2295,18 @@ body { overflow: hidden; }
 .cta-content p { font-size: 0.95rem; color: var(--text-2); margin-bottom: 32px; }
 .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
+/* Ghost btn override for light backgrounds */
+.cta-banner .btn-ghost {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+}
+.cta-banner .btn-ghost:hover {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
+
 /* ============================================================
    MARKETS
    ============================================================ */
