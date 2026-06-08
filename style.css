@@ -852,21 +852,13 @@ section::before {
 }
 
 .ticker-section { 
-  background: rgba(255, 255, 255, 0.55);
-  border-top: none; 
-  border-bottom: none; 
   padding: 0; 
   position: relative;
   overflow: hidden;
 }
 
 .ticker-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(1px 1px at 50% 50%, rgba(212,160,23,0.1), transparent);
-  background-size: 100% 100%;
-  pointer-events: none;
+  display: none;
 }
 
 .steps-section { 
@@ -880,27 +872,33 @@ section::before {
   background: transparent !important;
 }
 .features-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.2); 
-  z-index: 2;
-  pointer-events: none;
+  display: none;
 }
-.stats-section, 
-.platforms-section, 
-.markets-section, 
-.insurance-section, 
-.why-section, 
-.payment-section, 
-.testimonials-section, 
-.blog-section, 
-.cta-banner {
-  background: transparent !important;
-  position: relative;
-  overflow: hidden;
+/* ============================================================
+   ALTERNATING SECTION BACKGROUNDS — Financial Precision
+   ============================================================ */
+
+/* WHITE sections */
+.ticker-section,
+.features-section,
+.platforms-section,
+.insurance-section,
+.payment-section,
+.blog-section {
+  background: #ffffff !important;
 }
 
+/* LIGHT GREY sections */
+.steps-section,
+.stats-section,
+.markets-section,
+.why-section,
+.testimonials-section,
+.cta-banner {
+  background: #f4f6fa !important;
+}
+
+/* Remove old transparent/overlay backgrounds */
 .stats-section::before,
 .platforms-section::before,
 .markets-section::before,
@@ -910,12 +908,31 @@ section::before {
 .testimonials-section::before,
 .blog-section::before,
 .cta-banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.15);
-  z-index: 2;
-  pointer-events: none;
+  display: none !important;
+}
+
+/* Clean top border between sections for separation */
+.ticker-section,
+.steps-section,
+.features-section,
+.stats-section,
+.platforms-section,
+.cta-banner,
+.markets-section,
+.insurance-section,
+.why-section,
+.payment-section,
+.testimonials-section,
+.blog-section {
+  border-top: 1px solid rgba(14,42,100,0.06);
+}
+
+/* Steps section — keep the parallax bg image but tint lighter */
+.steps-section {
+  background-image: linear-gradient(rgba(244,246,250,0.92), rgba(244,246,250,0.92)), url('assets/imgs/trade-steps1.jpg') !important;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  background-position: center !important;
 }
 
 .section-header { text-align: center; margin-bottom: 48px; }
