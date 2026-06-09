@@ -28,11 +28,11 @@ html, body {
   --border-gold: rgba(212,160,23,0.35);
 
   /* Xelans Signature Gold */
-  --gold:        #d4a017;
-  --gold-2:      #c89b2a;
-  --gold-3:      #eecb6b;
-  --gold-light:  rgba(212,160,23,0.14);
-  --gold-glow:   0 0 24px rgba(212,160,23,0.22);
+  --gold:        #c8920a;
+  --gold-2:      #b8860b;
+  --gold-3:      #d4a017;
+  --gold-light:  rgba(184,134,11,0.14);
+  --gold-glow:   0 0 24px rgba(184,134,11,0.28);
 
   /* Xelans Signature Navy (logo blue) */
   --navy:        #0e2a64;
@@ -165,7 +165,7 @@ h1,h2,h3,h4,h5 {
   color: var(--heading);
 }
 .gradient-text {
-  background: linear-gradient(135deg, var(--gold-2) 0%, var(--gold-3) 100%);
+  background: linear-gradient(135deg, #b8860b 0%, #d4a017 40%, #c89b2a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
