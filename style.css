@@ -940,7 +940,7 @@ section::before {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 12px;
+  padding: 4px 14px 4px 10px;
   background: var(--gold);
   color: #ffffff;
   font-size: 0.68rem;
@@ -948,26 +948,43 @@ section::before {
   border-radius: var(--r-full);
   text-transform: uppercase;
   margin-bottom: 14px;
+  border-left: 3px solid var(--gold-2);
+  box-shadow: 2px 2px 0 rgba(184,134,11,0.25);
 }
 .section-tag::before {
   content: '';
   width: 5px; height: 5px;
   border-radius: 50%;
-  background: var(--gold-2);
+  background: rgba(255,255,255,0.7);
   animation: blink 1.8s infinite;
 }
 .section-title {
   font-size: clamp(1.7rem, 3vw, 2.6rem);
   color: var(--heading);
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+}
+/* Gold underline accent on section titles */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-2), var(--gold));
+  border-radius: 2px;
 }
 .section-sub {
   font-size: 0.92rem;
   color: var(--text-2);
   max-width: 500px;
-  margin: 0 auto;
+  margin: 12px auto 0;
   line-height: 1.7;
+}
 }
 
 /* ---------- FADE UP ---------- */
@@ -1670,6 +1687,56 @@ body { overflow: hidden; }
   transition: var(--ease);
 }
 .slider-dot.active { background: var(--gold); width: 22px; border-radius: 4px; }
+
+/* ============================================================
+   TRUST STRIP
+   ============================================================ */
+.trust-strip {
+  background: #ffffff;
+  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid rgba(14,42,100,0.08);
+  padding: 0;
+}
+.trust-strip-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 16px;
+  flex: 1;
+  transition: background 0.2s ease;
+}
+.trust-item:hover { background: rgba(184,134,11,0.04); }
+.trust-item svg { 
+  stroke: var(--gold); 
+  flex-shrink: 0;
+  width: 22px; height: 22px;
+}
+.trust-item div { display: flex; flex-direction: column; gap: 2px; }
+.trust-label { 
+  font-size: 0.78rem; 
+  font-weight: 800; 
+  color: var(--heading); 
+  white-space: nowrap;
+}
+.trust-sub { 
+  font-size: 0.67rem; 
+  color: var(--text-3); 
+  white-space: nowrap;
+}
+.trust-divider {
+  width: 1px;
+  background: rgba(14,42,100,0.08);
+  align-self: stretch;
+  margin: 10px 0;
+}
 
 /* ============================================================
    MARKET TICKER
@@ -3240,6 +3307,9 @@ body { overflow: hidden; }
   .footer-main-layout { flex-direction: column; gap: 60px; text-align: center; }
   .footer-info-col { margin: 0 auto; }
   .footer-nav-cols { grid-template-columns: repeat(2, 1fr); gap: 32px; text-align: left; }
+  .trust-strip-inner { flex-wrap: wrap; gap: 0; }
+  .trust-item { flex: 1 1 40%; }
+  .trust-divider { display: none; }
   .blog-grid { grid-template-columns: 1fr; }
   .footer-address-grid { grid-template-columns: 1fr; }
 }
